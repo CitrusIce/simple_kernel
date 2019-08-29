@@ -1,0 +1,4 @@
+file hx_kernel
+target remote :1234
+b main
+c
