@@ -24,7 +24,7 @@ boot: floppy
 mouse: enabled=0
 
 # 键盘 启用 US 键盘映射
-keyboard_mapping: enabled=1, map="$BXSHARE/keymaps/x11-pc-us.map"
+keyboard: keymap=/usr/share/bochs/keymaps/x11-pc-us.map
 
 # CPU 配置
 clock: sync=realtime

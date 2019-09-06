@@ -71,6 +71,8 @@ isr_common_stub:
 
 	popad
 	add esp,8
+    sti 
+    iret
 	
 %macro IRQ 2
   global irq%1

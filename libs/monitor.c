@@ -1,6 +1,7 @@
 #include "monitor.h"
 
-uint16_t * const video_memory = (uint16_t*)0xB8000;
+uint16_t * const video_memory = (uint16_t*)(0xB8000+PAGE_OFFSET);
+// uint16_t * const video_memory = (uint16_t*)0xB8000;
 const int screen_width = 80;
 const int screen_height = 25;
 const int default_color = 0b00000111;

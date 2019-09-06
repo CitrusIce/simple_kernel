@@ -1,4 +1,5 @@
 #include "common.h"
+// 内核的偏移地址
 inline void outb(uint16_t port, uint8_t value)
 {
     // asm volatile ("outb %1, %0" : : "dN" (addr), "a" (value));

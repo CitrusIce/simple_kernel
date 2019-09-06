@@ -3,6 +3,7 @@
 #include "types.h"
 #include "monitor.h"
 #define PANIC(msg) panic(msg, __FILE__, __LINE__);
+#define PAGE_OFFSET     0xC0000000
 void outb(uint16_t port, uint8_t value);
 uint8_t inb(uint16_t port);
 

@@ -2,14 +2,14 @@
 
 uint32_t placement_address;
 
-void memset(void* s, uint8_t ch, size_t n)
-{
-    int i;
-    for(i = 0; i < n; i++)
-    {
-        ((uint8_t*)s)[i] = ch;
-    }
-}
+// void memset(void* s, uint8_t ch, size_t n)
+// {
+    // int i;
+    // for(i = 0; i < n; i++)
+    // {
+        // ((uint8_t*)s)[i] = ch;
+    // }
+// }
 
 uint32_t kmalloc(uint32_t sz)
 {
