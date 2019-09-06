@@ -1,0 +1,518 @@
+	.file	"main.c"
+	.stabs	"/home/marisa/simple_kernel/",100,0,2,.Ltext0
+	.stabs	"init/main.c",100,0,2,.Ltext0
+	.text
+.Ltext0:
+	.stabs	"gcc2_compiled.",60,0,0,0
+	.stabs	"int:t(0,1)=r(0,1);-2147483648;2147483647;",128,0,0,0
+	.stabs	"char:t(0,2)=r(0,2);0;127;",128,0,0,0
+	.stabs	"long int:t(0,3)=r(0,3);-2147483648;2147483647;",128,0,0,0
+	.stabs	"unsigned int:t(0,4)=r(0,4);0;037777777777;",128,0,0,0
+	.stabs	"long unsigned int:t(0,5)=r(0,5);0;037777777777;",128,0,0,0
+	.stabs	"__int128:t(0,6)=@s128;r(0,6);02000000000000000000000000000000000000000000;01777777777777777777777777777777777777777777;",128,0,0,0
+	.stabs	"__int128 unsigned:t(0,7)=@s128;r(0,7);0;03777777777777777777777777777777777777777777;",128,0,0,0
+	.stabs	"long long int:t(0,8)=@s64;r(0,8);01000000000000000000000;00777777777777777777777;",128,0,0,0
+	.stabs	"long long unsigned int:t(0,9)=@s64;r(0,9);0;01777777777777777777777;",128,0,0,0
+	.stabs	"short int:t(0,10)=@s16;r(0,10);-32768;32767;",128,0,0,0
+	.stabs	"short unsigned int:t(0,11)=@s16;r(0,11);0;65535;",128,0,0,0
+	.stabs	"signed char:t(0,12)=@s8;r(0,12);-128;127;",128,0,0,0
+	.stabs	"unsigned char:t(0,13)=@s8;r(0,13);0;255;",128,0,0,0
+	.stabs	"float:t(0,14)=r(0,1);4;0;",128,0,0,0
+	.stabs	"double:t(0,15)=r(0,1);8;0;",128,0,0,0
+	.stabs	"long double:t(0,16)=r(0,1);12;0;",128,0,0,0
+	.stabs	"_Float32:t(0,17)=r(0,1);4;0;",128,0,0,0
+	.stabs	"_Float64:t(0,18)=r(0,1);8;0;",128,0,0,0
+	.stabs	"_Float128:t(0,19)=r(0,1);16;0;",128,0,0,0
+	.stabs	"_Float32x:t(0,20)=r(0,1);8;0;",128,0,0,0
+	.stabs	"_Float64x:t(0,21)=r(0,1);12;0;",128,0,0,0
+	.stabs	"_Decimal32:t(0,22)=r(0,1);4;0;",128,0,0,0
+	.stabs	"_Decimal64:t(0,23)=r(0,1);8;0;",128,0,0,0
+	.stabs	"_Decimal128:t(0,24)=r(0,1);16;0;",128,0,0,0
+	.stabs	"void:t(0,25)=(0,25)",128,0,0,0
+	.stabs	"include/types.h",130,0,0,0
+	.stabs	"uint32_t:t(1,1)=(0,4)",128,0,13,0
+	.stabs	"int32_t:t(1,2)=(0,1)",128,0,14,0
+	.stabs	"uint16_t:t(1,3)=(0,11)",128,0,15,0
+	.stabs	"int16_t:t(1,4)=(0,10)",128,0,16,0
+	.stabs	"uint8_t:t(1,5)=(0,13)",128,0,17,0
+	.stabs	"int8_t:t(1,6)=(0,2)",128,0,18,0
+	.stabs	"intptr_t:t(1,7)=(0,1)",128,0,20,0
+	.stabs	"size_t:t(1,8)=(0,4)",128,0,21,0
+	.stabn	162,0,0,0
+	.stabs	"include/descriptor_tables.h",130,0,0,0
+	.stabs	"include/gdt.h",130,0,0,0
+	.stabs	"gdt_entry_struct:T(3,1)=s8limit_low:(1,3),0,16;base_low:(1,3),16,16;base_middle:(1,5),32,8;access:(1,5),40,8;granularity:(1,5),48,8;base_high:(1,5),56,8;;",128,0,0,0
+	.stabs	"gdt_entry_t:t(3,2)=(3,1)",128,0,13,0
+	.stabs	"gdt_ptr_struct:T(3,3)=s6limit:(1,3),0,16;base:(1,1),16,32;;",128,0,0,0
+	.stabs	"gdt_ptr_t:t(3,4)=(3,3)",128,0,20,0
+	.stabn	162,0,0,0
+	.stabs	"include/idt.h",130,0,0,0
+	.stabs	"idt_entry_struct:T(4,1)=s8base_low:(1,3),0,16;sel:(1,3),16,16;always0:(1,5),32,8;flags:(1,5),40,8;base_high:(1,3),48,16;;",128,0,0,0
+	.stabs	"idt_entry_t:t(4,2)=(4,1)",128,0,14,0
+	.stabs	"idt_ptr_struct:T(4,3)=s6limit:(1,3),0,16;base:(1,1),16,32;;",128,0,0,0
+	.stabs	"idt_ptr_t:t(4,4)=(4,3)",128,0,20,0
+	.stabn	162,0,0,0
+	.stabn	162,0,0,0
+	.stabs	"include/multiboot.h",130,0,0,0
+	.stabs	"multiboot_t:T(5,1)=s96flags:(1,1),0,32;mem_lower:(1,1),32,32;mem_upper:(1,1),64,32;boot_device:(1,1),96,32;cmdline:(1,1),128,32;mods_count:(1,1),160,32;mods_addr:(1,1),192,32;num:(1,1),224,32;size:(1,1),256,32;addr:(1,1),288,32;shndx:(1,1),320,32;mmap_length:(1,1),352,32;mmap_addr:(1,1),384,32;drives_length:(1,1),416,32;drives_addr:(1,1),448,32;config_table:(1,1),480,32;boot_loader_name:(1,1),512,32;apm_table:(1,1),544,32;vbe_control_info:(1,1),576,32;vbe_mode_info:(1,1),608,32;vbe_mode:(1,1),640,32;vbe_interface_seg:(1,1),672,32;vbe_interface_off:(1,1),704,32;vbe_interface_len:(1,1),736,32;;",128,0,0,0
+	.stabs	"multiboot_t:t(5,2)=(5,1)",128,0,82,0
+	.stabs	"mmap_entry_t:T(5,3)=s24size:(1,1),0,32;base_addr_low:(1,1),32,32;base_addr_high:(1,1),64,32;length_low:(1,1),96,32;length_high:(1,1),128,32;type:(1,1),160,32;;",128,0,0,0
+	.stabs	"mmap_entry_t:t(5,4)=(5,3)",128,0,98,0
+	.stabn	162,0,0,0
+	.stabs	"include/vmm.h",130,0,0,0
+	.stabs	"include/isr.h",130,0,0,0
+	.stabs	"registers:T(7,1)=s64ds:(1,1),0,32;edi:(1,1),32,32;esi:(1,1),64,32;ebp:(1,1),96,32;esp:(1,1),128,32;ebx:(1,1),160,32;edx:(1,1),192,32;ecx:(1,1),224,32;eax:(1,1),256,32;int_no:(1,1),288,32;err_code:(1,1),320,32;eip:(1,1),352,32;cs:(1,1),384,32;eflags:(1,1),416,32;useresp:(1,1),448,32;ss:(1,1),480,32;;",128,0,0,0
+	.stabs	"registers_t:t(7,2)=(7,1)",128,0,9,0
+	.stabs	"isr_t:t(7,3)=(7,4)=*(7,5)=f(0,25)",128,0,10,0
+	.stabn	162,0,0,0
+	.stabs	"pgd_t:t(6,1)=(1,1)",128,0,50,0
+	.stabs	"pte_t:t(6,2)=(1,1)",128,0,53,0
+	.stabn	162,0,0,0
+	.comm	cursor_x,4,4
+	.stabs	"cursor_x:G(0,1)",32,0,10,0
+	.comm	cursor_y,4,4
+	.stabs	"cursor_y:G(0,1)",32,0,11,0
+	.comm	kern_stack,8192,32
+	.stabs	"kern_stack:G(0,26)=ar(0,27)=r(0,27);0;037777777777;;0;8191;(0,2)",32,0,14,0
+	.comm	glb_mboot_ptr,4,4
+	.stabs	"glb_mboot_ptr:G(0,28)=*(5,2)",32,0,17,0
+	.globl	pgd_tmp
+	.section	.init.data,"aw"
+	.align 4
+	.type	pgd_tmp, @object
+	.size	pgd_tmp, 4
+pgd_tmp:
+	.long	4096
+	.stabs	"pgd_tmp:G(0,29)=*(6,1)",32,0,22,0
+	.globl	pte_low
+	.align 4
+	.type	pte_low, @object
+	.size	pte_low, 4
+pte_low:
+	.long	8192
+	.stabs	"pte_low:G(0,29)",32,0,23,0
+	.globl	pte_hign
+	.align 4
+	.type	pte_hign, @object
+	.size	pte_hign, 4
+pte_hign:
+	.long	12288
+	.stabs	"pte_hign:G(0,29)",32,0,23,0
+	.section	.init.text,"ax",@progbits
+	.stabs	"kernel_entry:F(0,25)",36,0,26,kernel_entry
+	.globl	kernel_entry
+	.type	kernel_entry, @function
+kernel_entry:
+	.stabd	46,0,0
+	.stabn	68,0,27,.LM0-.LFBB1
+.LM0:
+.LFBB1:
+.LFB0:
+	.cfi_startproc
+	pushl	%ebp
+	.cfi_def_cfa_offset 8
+	.cfi_offset 5, -8
+	movl	%esp, %ebp
+	.cfi_def_cfa_register 5
+	pushl	%ebx
+	subl	$20, %esp
+	.cfi_offset 3, -12
+	call	__x86.get_pc_thunk.ax
+	addl	$_GLOBAL_OFFSET_TABLE_, %eax
+	.stabn	68,0,28,.LM1-.LFBB1
+.LM1:
+	movl	pte_low@GOTOFF(%eax), %edx
+	movl	%edx, %ecx
+	.stabn	68,0,28,.LM2-.LFBB1
+.LM2:
+	movl	pgd_tmp@GOTOFF(%eax), %edx
+	.stabn	68,0,28,.LM3-.LFBB1
+.LM3:
+	orl	$3, %ecx
+	.stabn	68,0,28,.LM4-.LFBB1
+.LM4:
+	movl	%ecx, (%edx)
+	.stabn	68,0,29,.LM5-.LFBB1
+.LM5:
+	movl	pte_hign@GOTOFF(%eax), %edx
+	movl	%edx, %ecx
+	.stabn	68,0,29,.LM6-.LFBB1
+.LM6:
+	movl	pgd_tmp@GOTOFF(%eax), %edx
+	addl	$3072, %edx
+	.stabn	68,0,29,.LM7-.LFBB1
+.LM7:
+	orl	$3, %ecx
+	.stabn	68,0,29,.LM8-.LFBB1
+.LM8:
+	movl	%ecx, (%edx)
+	.stabn	68,0,33,.LM9-.LFBB1
+.LM9:
+	movl	$0, -12(%ebp)
+	.stabn	68,0,33,.LM10-.LFBB1
+.LM10:
+	jmp	.L2
+.L3:
+	.stabn	68,0,34,.LM11-.LFBB1
+.LM11:
+	movl	-12(%ebp), %edx
+	sall	$12, %edx
+	.stabn	68,0,34,.LM12-.LFBB1
+.LM12:
+	movl	%edx, %ebx
+	orl	$3, %ebx
+	.stabn	68,0,34,.LM13-.LFBB1
+.LM13:
+	movl	pte_low@GOTOFF(%eax), %edx
+	movl	-12(%ebp), %ecx
+	sall	$2, %ecx
+	addl	%ecx, %edx
+	.stabn	68,0,34,.LM14-.LFBB1
+.LM14:
+	movl	%ebx, %ecx
+	.stabn	68,0,34,.LM15-.LFBB1
+.LM15:
+	movl	%ecx, (%edx)
+	.stabn	68,0,33,.LM16-.LFBB1
+.LM16:
+	addl	$1, -12(%ebp)
+.L2:
+	.stabn	68,0,33,.LM17-.LFBB1
+.LM17:
+	cmpl	$1023, -12(%ebp)
+	jle	.L3
+	.stabn	68,0,38,.LM18-.LFBB1
+.LM18:
+	movl	$0, -12(%ebp)
+	.stabn	68,0,38,.LM19-.LFBB1
+.LM19:
+	jmp	.L4
+.L5:
+	.stabn	68,0,39,.LM20-.LFBB1
+.LM20:
+	movl	-12(%ebp), %edx
+	sall	$12, %edx
+	.stabn	68,0,39,.LM21-.LFBB1
+.LM21:
+	movl	%edx, %ebx
+	orl	$3, %ebx
+	.stabn	68,0,39,.LM22-.LFBB1
+.LM22:
+	movl	pte_hign@GOTOFF(%eax), %edx
+	movl	-12(%ebp), %ecx
+	sall	$2, %ecx
+	addl	%ecx, %edx
+	.stabn	68,0,39,.LM23-.LFBB1
+.LM23:
+	movl	%ebx, %ecx
+	.stabn	68,0,39,.LM24-.LFBB1
+.LM24:
+	movl	%ecx, (%edx)
+	.stabn	68,0,38,.LM25-.LFBB1
+.LM25:
+	addl	$1, -12(%ebp)
+.L4:
+	.stabn	68,0,38,.LM26-.LFBB1
+.LM26:
+	cmpl	$1023, -12(%ebp)
+	jle	.L5
+	.stabn	68,0,43,.LM27-.LFBB1
+.LM27:
+	movl	pgd_tmp@GOTOFF(%eax), %edx
+#APP
+# 43 "init/main.c" 1
+	mov %edx, %cr3
+# 0 "" 2
+	.stabn	68,0,48,.LM28-.LFBB1
+.LM28:
+# 48 "init/main.c" 1
+	mov %cr0, %edx
+# 0 "" 2
+#NO_APP
+	movl	%edx, -16(%ebp)
+	.stabn	68,0,49,.LM29-.LFBB1
+.LM29:
+	orl	$-2147483648, -16(%ebp)
+	.stabn	68,0,50,.LM30-.LFBB1
+.LM30:
+	movl	-16(%ebp), %edx
+#APP
+# 50 "init/main.c" 1
+	mov %edx, %cr0
+# 0 "" 2
+	.stabn	68,0,53,.LM31-.LFBB1
+.LM31:
+#NO_APP
+	movl	kern_stack@GOT(%eax), %edx
+	.stabn	68,0,53,.LM32-.LFBB1
+.LM32:
+	addl	$8192, %edx
+	.stabn	68,0,53,.LM33-.LFBB1
+.LM33:
+	andl	$-16, %edx
+	movl	%edx, -20(%ebp)
+	.stabn	68,0,54,.LM34-.LFBB1
+.LM34:
+	movl	-20(%ebp), %edx
+#APP
+# 54 "init/main.c" 1
+	mov %edx, %esp
+	xor %ebp, %ebp
+# 0 "" 2
+	.stabn	68,0,58,.LM35-.LFBB1
+.LM35:
+#NO_APP
+	movl	mboot_ptr_tmp@GOT(%eax), %edx
+	movl	(%edx), %edx
+	movl	glb_mboot_ptr@GOT(%eax), %eax
+	movl	%edx, (%eax)
+	.stabn	68,0,61,.LM36-.LFBB1
+.LM36:
+	call	main
+	.stabn	68,0,62,.LM37-.LFBB1
+.LM37:
+	nop
+	addl	$20, %esp
+	popl	%ebx
+	.cfi_restore 3
+	popl	%ebp
+	.cfi_restore 5
+	.cfi_def_cfa 4, 4
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	kernel_entry, .-kernel_entry
+	.stabs	"i:(0,1)",128,0,32,-12
+	.stabs	"cr0:(1,1)",128,0,45,-16
+	.stabs	"kern_stack_top:(1,1)",128,0,53,-20
+	.stabn	192,0,0,.LFBB1-.LFBB1
+	.stabn	224,0,0,.Lscope1-.LFBB1
+.Lscope1:
+	.stabs	"",36,0,0,.Lscope1-.LFBB1
+	.stabd	78,0,0
+	.section	.rodata
+.LC0:
+	.string	"hello world!"
+	.align 4
+.LC1:
+	.string	"kernel in memory start: 0x%08X\n"
+	.align 4
+.LC2:
+	.string	"kernel in memory end:   0x%08X\n"
+	.align 4
+.LC3:
+	.string	"kernel in memory used:   %d KB\n\n"
+	.align 4
+.LC4:
+	.string	"\nThe Count of Physical Memory Page is: %u\n\n"
+.LC5:
+	.string	"Test Physical Memory Alloc :\n"
+.LC6:
+	.string	"Alloc Physical Addr: 0x%08X\n"
+	.text
+	.stabs	"main:F(0,1)",36,0,64,main
+	.globl	main
+	.type	main, @function
+main:
+	.stabd	46,0,0
+	.stabn	68,0,65,.LM38-.LFBB2
+.LM38:
+.LFBB2:
+.LFB1:
+	.cfi_startproc
+	leal	4(%esp), %ecx
+	.cfi_def_cfa 1, 0
+	andl	$-16, %esp
+	pushl	-4(%ecx)
+	pushl	%ebp
+	.cfi_escape 0x10,0x5,0x2,0x75,0
+	movl	%esp, %ebp
+	pushl	%ebx
+	pushl	%ecx
+	.cfi_escape 0xf,0x3,0x75,0x78,0x6
+	.cfi_escape 0x10,0x3,0x2,0x75,0x7c
+	subl	$16, %esp
+	call	__x86.get_pc_thunk.bx
+	addl	$_GLOBAL_OFFSET_TABLE_, %ebx
+	.stabn	68,0,67,.LM39-.LFBB2
+.LM39:
+	call	init_descriptor_tables@PLT
+	.stabn	68,0,68,.LM40-.LFBB2
+.LM40:
+	call	clear@PLT
+	.stabn	68,0,69,.LM41-.LFBB2
+.LM41:
+	subl	$12, %esp
+	leal	.LC0@GOTOFF(%ebx), %eax
+	pushl	%eax
+	call	print@PLT
+	addl	$16, %esp
+	.stabn	68,0,70,.LM42-.LFBB2
+.LM42:
+	subl	$12, %esp
+	pushl	$12345
+	call	print_num_dec@PLT
+	addl	$16, %esp
+	.stabn	68,0,72,.LM43-.LFBB2
+.LM43:
+	subl	$12, %esp
+	pushl	$50
+	call	init_timer@PLT
+	addl	$16, %esp
+	.stabn	68,0,73,.LM44-.LFBB2
+.LM44:
+	subl	$8, %esp
+	movl	kern_start@GOT(%ebx), %eax
+	pushl	%eax
+	leal	.LC1@GOTOFF(%ebx), %eax
+	pushl	%eax
+	call	printk@PLT
+	addl	$16, %esp
+	.stabn	68,0,74,.LM45-.LFBB2
+.LM45:
+	subl	$8, %esp
+	movl	kern_end@GOT(%ebx), %eax
+	pushl	%eax
+	leal	.LC2@GOTOFF(%ebx), %eax
+	pushl	%eax
+	call	printk@PLT
+	addl	$16, %esp
+	.stabn	68,0,75,.LM46-.LFBB2
+.LM46:
+	movl	kern_end@GOT(%ebx), %eax
+	movl	%eax, %edx
+	movl	kern_start@GOT(%ebx), %eax
+	subl	%eax, %edx
+	movl	%edx, %eax
+	.stabn	68,0,75,.LM47-.LFBB2
+.LM47:
+	addl	$1023, %eax
+	.stabn	68,0,75,.LM48-.LFBB2
+.LM48:
+	leal	1023(%eax), %edx
+	testl	%eax, %eax
+	cmovs	%edx, %eax
+	sarl	$10, %eax
+	subl	$8, %esp
+	pushl	%eax
+	leal	.LC3@GOTOFF(%ebx), %eax
+	pushl	%eax
+	call	printk@PLT
+	addl	$16, %esp
+	.stabn	68,0,76,.LM49-.LFBB2
+.LM49:
+	call	show_memory_map@PLT
+	.stabn	68,0,77,.LM50-.LFBB2
+.LM50:
+	call	init_vmm@PLT
+	.stabn	68,0,78,.LM51-.LFBB2
+.LM51:
+	call	init_pmm@PLT
+	.stabn	68,0,80,.LM52-.LFBB2
+.LM52:
+	movl	phy_page_count@GOT(%ebx), %eax
+	movl	(%eax), %eax
+	subl	$8, %esp
+	pushl	%eax
+	leal	.LC4@GOTOFF(%ebx), %eax
+	pushl	%eax
+	call	printk@PLT
+	addl	$16, %esp
+	.stabn	68,0,82,.LM53-.LFBB2
+.LM53:
+	movl	$0, -12(%ebp)
+	.stabn	68,0,83,.LM54-.LFBB2
+.LM54:
+	subl	$12, %esp
+	leal	.LC5@GOTOFF(%ebx), %eax
+	pushl	%eax
+	call	printk@PLT
+	addl	$16, %esp
+	.stabn	68,0,84,.LM55-.LFBB2
+.LM55:
+	call	pmm_alloc_page@PLT
+	movl	%eax, -12(%ebp)
+	.stabn	68,0,85,.LM56-.LFBB2
+.LM56:
+	subl	$8, %esp
+	pushl	-12(%ebp)
+	leal	.LC6@GOTOFF(%ebx), %eax
+	pushl	%eax
+	call	printk@PLT
+	addl	$16, %esp
+	.stabn	68,0,86,.LM57-.LFBB2
+.LM57:
+	call	pmm_alloc_page@PLT
+	movl	%eax, -12(%ebp)
+	.stabn	68,0,87,.LM58-.LFBB2
+.LM58:
+	subl	$8, %esp
+	pushl	-12(%ebp)
+	leal	.LC6@GOTOFF(%ebx), %eax
+	pushl	%eax
+	call	printk@PLT
+	addl	$16, %esp
+	.stabn	68,0,88,.LM59-.LFBB2
+.LM59:
+	call	pmm_alloc_page@PLT
+	movl	%eax, -12(%ebp)
+	.stabn	68,0,89,.LM60-.LFBB2
+.LM60:
+	subl	$8, %esp
+	pushl	-12(%ebp)
+	leal	.LC6@GOTOFF(%ebx), %eax
+	pushl	%eax
+	call	printk@PLT
+	addl	$16, %esp
+	.stabn	68,0,90,.LM61-.LFBB2
+.LM61:
+	call	pmm_alloc_page@PLT
+	movl	%eax, -12(%ebp)
+	.stabn	68,0,91,.LM62-.LFBB2
+.LM62:
+	subl	$8, %esp
+	pushl	-12(%ebp)
+	leal	.LC6@GOTOFF(%ebx), %eax
+	pushl	%eax
+	call	printk@PLT
+	addl	$16, %esp
+.L7:
+	.stabn	68,0,92,.LM63-.LFBB2
+.LM63:
+	jmp	.L7
+	.cfi_endproc
+.LFE1:
+	.size	main, .-main
+	.stabs	"allc_addr:(1,1)",128,0,82,-12
+	.stabn	192,0,0,.LFBB2-.LFBB2
+	.stabn	224,0,0,.Lscope2-.LFBB2
+.Lscope2:
+	.stabs	"",36,0,0,.Lscope2-.LFBB2
+	.stabd	78,0,0
+	.section	.text.__x86.get_pc_thunk.ax,"axG",@progbits,__x86.get_pc_thunk.ax,comdat
+	.globl	__x86.get_pc_thunk.ax
+	.hidden	__x86.get_pc_thunk.ax
+	.type	__x86.get_pc_thunk.ax, @function
+__x86.get_pc_thunk.ax:
+.LFB2:
+	.cfi_startproc
+	movl	(%esp), %eax
+	ret
+	.cfi_endproc
+.LFE2:
+	.section	.text.__x86.get_pc_thunk.bx,"axG",@progbits,__x86.get_pc_thunk.bx,comdat
+	.globl	__x86.get_pc_thunk.bx
+	.hidden	__x86.get_pc_thunk.bx
+	.type	__x86.get_pc_thunk.bx, @function
+__x86.get_pc_thunk.bx:
+.LFB3:
+	.cfi_startproc
+	movl	(%esp), %ebx
+	ret
+	.cfi_endproc
+.LFE3:
+	.text
+	.stabs	"",100,0,0,.Letext0
+.Letext0:
+	.ident	"GCC: (GNU) 9.1.0"
+	.section	.note.GNU-stack,"",@progbits
