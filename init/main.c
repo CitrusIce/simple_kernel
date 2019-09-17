@@ -8,6 +8,9 @@
 #include "pmm.h"
 #include "vmm.h"
 #include "common.h"
+#include "heap.h"
+#include "task.h"
+#include "scheduler.h"
 
 
 // 开启分页机制之后的内核栈
@@ -22,6 +25,8 @@ extern multiboot_t* mboot_ptr_tmp;
 __attribute__((section(".init.data"))) pgd_t *pgd_tmp  = (pgd_t *)0x1000;
 __attribute__((section(".init.data"))) pgd_t *pte_low  = (pgd_t *)0x2000; __attribute__((section(".init.data"))) pgd_t *pte_hign = (pgd_t *)0x3000;
 int main();
+
+uint32_t kern_stack_top;
 //int main(struct multiboot *mboot_ptr)
 __attribute__((section(".init.text")))void kernel_entry()
 {
@@ -50,7 +55,7 @@ __attribute__((section(".init.text")))void kernel_entry()
     asm volatile ("mov %0, %%cr0" : : "r" (cr0));
     
     // 切换内核栈
-    uint32_t kern_stack_top = ((uint32_t)kern_stack + STACK_SIZE) & 0xFFFFFFF0;
+    kern_stack_top = ((uint32_t)kern_stack + STACK_SIZE) & 0xFFFFFFF0;
     asm volatile ("mov %0, %%esp\n\t"
             "xor %%ebp, %%ebp" : : "r" (kern_stack_top));
 
@@ -60,6 +65,22 @@ __attribute__((section(".init.text")))void kernel_entry()
     // 调用内核初始化函数
     main();   
 }
+
+int flag = 0;
+
+int thread(void *arg)
+{
+    while (1) {
+        if (flag == 1) {
+            printk( "B");
+            flag = 0;
+        }
+    }
+
+    return 0;
+}
+
+
 
 int main()
 {
@@ -76,6 +97,8 @@ int main()
     show_memory_map();
     init_pmm();
     init_vmm();
+
+    init_sched();
     
     printk("\nThe Count of Physical Memory Page is: %u\n\n", phy_page_count);
 
@@ -89,7 +112,16 @@ int main()
     printk("Alloc Physical Addr: 0x%08X\n", allc_addr);
     allc_addr = pmm_alloc_page();
     printk("Alloc Physical Addr: 0x%08X\n", allc_addr);
+
+    test_heap();
+    kernel_thread(thread,NULL);
+    asm volatile ("sti");
+    while (1) {
+        if (flag == 0) {
+            printk( "A");
+            flag = 1;
+        }
+    }
     while(1){}
-    // asm volatile ("sti");
     return 0xDEADBAB1;
 }

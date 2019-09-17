@@ -1,3 +1,5 @@
+#ifndef _ISR_H
+#define _ISR_H
 #include "monitor.h"
 #include "types.h"
 typedef struct registers
@@ -9,3 +11,4 @@ typedef struct registers
 } registers_t;
 typedef void (*isr_t)(registers_t);
 void register_interrupt_handler(uint8_t n, isr_t handler);
+#endif

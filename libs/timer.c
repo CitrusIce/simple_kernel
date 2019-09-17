@@ -1,15 +1,17 @@
 #include "timer.h"
 #include "isr.h"
 #include "monitor.h"
+#include "scheduler.h"
 
 uint32_t tick = 0;
 
 static void timer_callback(registers_t regs)
 {
-   tick++;
-   print("Tick: ");
-   print_num_dec(tick);
-   print("\n");
+    schedule();
+   // tick++;
+   // print("Tick: ");
+   // print_num_dec(tick);
+   // print("\n");
 }
 
 void init_timer(uint32_t frequency)

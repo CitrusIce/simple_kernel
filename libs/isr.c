@@ -11,6 +11,7 @@ void isr_handler(registers_t regs)
 	print("INTERRUPT:");
 	print_num_dec(regs.int_no);
 	print("\n");
+    while(1){}
 	
 }
 // This gets called from our ASM interrupt handler stub.
